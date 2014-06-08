@@ -1,0 +1,174 @@
+.pull-right { float:right;}
+pre { margin: 15px 0;}
+ul { margin-bottom: 15px;}
+.hide { display:none;}
+.acenter { text-align: center;}
+.aleft { text-align: left;}
+.aright { text-align: right;}
+
+span.stars { width: 125px; height: 25px; display:block;}
+  span.stars.star_1 { background:url("../img/stars_one.png") no-repeat;}
+  span.stars.star_2 { background:url("../img/stars_two.png") no-repeat;}
+  span.stars.star_3 { background:url("../img/stars_three.png") no-repeat;}
+  span.stars.star_4 { background:url("../img/stars_four.png") no-repeat;}
+  span.stars.star_5 { background:url("../img/stars_five.png") no-repeat;}
+
+#header h1 { float:left; }
+#header ul { float:right; margin:0; padding:0;}
+  #header ul li { display:inline-block; margin:0; padding:0;}
+    #header ul li a { display:block; background: #ccc; color: #333; padding: 5px 10px;}
+	
+.stores_index #header ul li.stores a,
+.stores_add #header ul li.stores_add a,
+.pages_display_features #header ul li.features a,
+.users_login #header ul li.admin a,
+.pages_display_installation #header ul li.installation a { background: #fff;}
+
+.stores_index {}
+  .stores_index .map_wrapper { overflow:hidden;}
+    .stores_index .map_wrapper .side { float:left; width: 25%;}
+      .stores_index .map_wrapper .side form { margin: 0;}
+      .stores_index .map_wrapper .side form .input { margin: 0;}
+    .stores_index .map_wrapper .main { float:right; width: 100%;}
+      .stores_index .map_wrapper .main #map_canvas { height: 200px;}
+	  
+.maps_popup {}
+  .maps_popup h1 { margin:0; padding:0; font-size: 13px; font-weight: bold;}
+  .maps_popup h2 { margin:0 0 5px 0; padding:0; font-size: 12px;}
+  .maps_popup p { margin:0; padding:0; font-size: 10px;}
+  .maps_popup p.tel {}
+  .maps_popup p.email {}
+  .maps_popup p.web {}
+  .maps_popup p.desc {}
+
+.stores_add {}
+  .stores_add #address_wrapper { padding: 0; width:100%; overflow: hidden;}
+  .stores_add #address_wrapper .input { width: 48%; float:left; clear:none;}
+    .stores_add #address_wrapper .input textarea { clear:none;}
+  .stores_add #address_wrapper #map_canvas { width: 48%; float:right; margin: 0; clear: none; height: 250px;}
+
+.related { margin-top: 30px;}
+  .related h3 { border-bottom: 1px solid #2C6877;}
+  
+#footer {}
+  #footer p { text-align: center;}
+  #footer p a{ color: #fff;}
+  
+
+.star-rating{
+	list-style:none;
+	margin: 0px;
+	padding: 0px;
+	width: 125px;
+	height: 25px;
+	position: relative;
+	background: url(../img/alt_star.gif) top left repeat-x;		
+}
+.star-rating li{
+	padding: 0px;
+	margin: 0px;
+	height: 25px;
+	width: 25px;		
+	/*\*/
+	float: left;
+	/* */
+}
+.star-rating li a{
+	display:block;
+	width:25px;
+	height: 25px;
+	line-height:25px;
+	text-decoration: none;
+	text-indent: -9000px;
+	z-index: 20;
+	position: absolute;
+	padding: 0px;
+	overflow:hidden;
+}
+.star-rating li a:hover{
+	background: url(../img/alt_star.gif) left center;
+	z-index: 2;
+	left: 0px;
+	border:none;
+}
+.star-rating a.one-star{
+	left: 0px;
+}
+.star-rating a.one-star:hover{
+	width:25px;
+}
+.star-rating a.two-stars{
+	left:25px;
+}
+.star-rating a.two-stars:hover{
+	width: 50px;
+}
+.star-rating a.three-stars{
+	left: 50px;
+}
+.star-rating a.three-stars:hover{
+	width: 75px;
+}
+.star-rating a.four-stars{
+	left: 75px;
+}	
+.star-rating a.four-stars:hover{
+	width: 100px;
+}
+.star-rating a.five-stars{
+	left: 100px;
+}
+.star-rating a.five-stars:hover{
+	width: 125px;
+}
+.star-rating li.current-rating{
+	background: url(../img/alt_star.gif) left bottom;
+	position: absolute;
+	height: 25px;
+	display: block;
+	text-indent: -9000px;
+	z-index: 1;
+}
+/* remove halo effect in firefox   */
+a:active{
+	outline: none;
+}
+
+.star-rating.one-star li.current-rating{
+	width:25px;
+}
+.star-rating.two-stars li.current-rating{
+	width:50px;
+}
+.star-rating.three-stars li.current-rating{
+	width:75px;
+}
+.star-rating.four-stars li.current-rating{
+	width:100px;
+}
+.star-rating.five-stars li.current-rating{
+	width:125px;
+}
+
+.button{
+    background-color: #ccc;
+    padding: 5px;
+    margin-top: 10px;
+    float: right;
+    color: black;
+}
+
+.sep{
+   
+    padding: 5px;
+    margin-top: 10px;
+ 
+}
+
+.navbar-brand {
+    max-width: 50%;
+}
+
+#stores_table {
+     margin-top: 10px;
+}

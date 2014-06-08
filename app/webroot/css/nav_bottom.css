@@ -1,0 +1,38 @@
+
+body {
+  padding-top: 50px;
+}
+
+span.glyphicon-home {
+    font-size: 2.0em;
+  	padding: 4px;
+  	
+}
+
+span.glyphicon-info-sign {
+    font-size: 2.0em;
+  	padding: 4px;
+  	
+}
+
+span.glyphicon-search {
+    font-size: 2.0em;
+  	padding: 4px;
+  	
+}
+
+
+span.glyphicon-plus-sign { 
+    font-size: 2.0em;
+  	padding: 4px;
+  	
+}
+
+
+
+footer .navbar-collapse.in {
+    bottom: 70px;
+    position: absolute;
+    background-color:#333;
+    width:100%;
+}

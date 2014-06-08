@@ -1,0 +1,21 @@
+.pull-right { float:right;}
+
+#header h1 { float:left; }
+#header ul { float:right; margin:0; padding:0;}
+  #header ul li { display:inline-block; margin:0; padding:0;}
+    #header ul li a { display:block; background: #ccc; color: #333; padding: 10px;}
+
+#stores #header ul li.stores a,
+#categories #header ul li.categories a,
+#reviews #header ul li.reviews a,
+#users #header ul li.users a { background: #fff;}
+
+.stores_admin_add {}
+  .stores_admin_add #address_wrapper,
+  .stores_admin_edit #address_wrapper { padding: 0; width:100%; overflow: hidden;}
+  .stores_admin_add #address_wrapper .input,
+  .stores_admin_edit #address_wrapper .input { width: 48%; float:left; clear:none;}
+    .stores_admin_add #address_wrapper .input textarea,
+    .stores_admin_edit #address_wrapper .input textarea { clear:none;}
+  .stores_admin_add #address_wrapper #map_canvas,
+  .stores_admin_edit #address_wrapper #map_canvas { width: 48%; float:right; margin: 0; clear: none; height: 250px;}
