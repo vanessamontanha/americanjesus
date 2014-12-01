@@ -16,7 +16,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
- $cakeDescription = __d('cake_dev','Applergy'); ?>
+ $cakeDescription = __d('cake_dev','Gluten Free'); ?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -24,8 +24,8 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Applergy</title>
-	<meta name="description" content="Applergy">
+	<title>Gluten Free</title>
+	<meta name="description" content="Gluten Free">
 	<meta name="author" content="Vanessa Montanha">
 	
 	<?php
@@ -33,7 +33,6 @@
                 echo $this->Html->css('cake.generic');
                 echo $this->Html->css('generic');
 		echo $this->Html->css('bootstrap.min');
-		echo $this->Html->css('custom');
                 echo $this->Html->css('navigation_top');
                 echo $this->Html->css('nav_bottom');
 		echo $this->fetch('meta');
@@ -60,8 +59,9 @@
 <body id="<?php echo $this->params['controller']; ?>" class="<?php echo $this->params['controller'].'_'.$this->params['action']; echo (isset($page))?'_'.$page:''; ?>">
 	<div id="container">
 		<?php echo $this->element('nav_top');?>
+           
 		<div id="content">
-			<noscript><p class="error">Javascript needs to be enabled for the Store Locator to work</p></noscript>
+			<noscript><p class="error">Javascript needs to be enabled for Glu Free to work</p></noscript>
 			<?php echo $this->Session->flash(); ?>
 			<?php echo $this->fetch('content'); ?>
 		</div>
@@ -87,8 +87,30 @@
     
     <?php echo $this->Html->script('bootstrap.min'); ?>   
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     	
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 	<?php echo $this->fetch('scriptBottom'); ?>
+    
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '845820868772146',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
 </body>
 </html>

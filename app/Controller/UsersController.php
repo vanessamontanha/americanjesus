@@ -20,7 +20,7 @@ class UsersController extends AppController {
 	 */
 	
         public $helpers = array('Time', 'Html', 'Form', 'Session');
-        public $components = array('Session');
+        public $components = array('Session', 'Auth');
 	
 	/**
 	 * Pagination options
@@ -33,8 +33,67 @@ class UsersController extends AppController {
         )
     );
         
-  
+       function beforeFilter() {
+       parent::beforeFilter();
+        $this->Auth->authenticate = array(
+       AuthComponent::ALL => array('userModel' => 'User'),
+        'Facebook'
+   );
+        }
+        
+        
+  public function index($id = null) {
+        $this->User->id = $id;
+        if (!$this->User->exists()) {
+            throw new NotFoundException(__('Invalid user'));
+        }
+        $this->set('user', $this->User->read(null, $id));
+    }
+    
+    public function view($id = null) {
+        $this->User->id = $id;
+        if (!$this->User->exists()) {
+            throw new NotFoundException(__('Invalid user'));
+        }
+        $this->set('user', $this->User->read(null, $id));
+    }
 
+    public function add() {
+        if ($this->request->is('post')) {
+            $this->User->create();
+            if ($this->User->save($this->request->data)) {
+                $this->Session->setFlash(__('The user has been saved'));
+                return $this->redirect(array('action' => 'index'));
+            }
+            $this->Session->setFlash(
+                __('The user could not be saved. Please, try again.')
+            );
+        }
+    }
+public function login() {
+    if ($this->request->is('post') || $this->request->is('get')) {
+
+        // facebook requests a csrf protection token
+        if (!($csrf_token = $this->Session->read("state"))) {
+            $csrf_token = md5(uniqid(rand(), TRUE));
+            $this->Session->write("state",$csrf_token); //CSRF protection
+        }
+        $this->set("csrfToken",$csrf_token);
+
+        // login        
+        if ($this->Auth->login()) {
+            return $this->redirect(array('controller'=>'categories', 'action'=>'index'));
+        } else {
+            $this->Session->setFlash(__('Your login failed'), 'default', array(), 'auth');
+        }
+    }
+}
+
+//function logout(){
+  // $this->Session->destroy();
+    //    $this->redirect($this->Auth->logout());
+
+//}
 
 	/**
 	 * Login action
@@ -42,46 +101,52 @@ class UsersController extends AppController {
          * @throws MethodNotAllowedException
          */
 	 
-	public function login() {
+	//public function login() {
 		// disable login if set in settings
-		if(!Configure::read('Admin.enable_admin_panel')) {
-			throw new MethodNotAllowedException();
-		}
+		//if(!Configure::read('Admin.enable_admin_panel')) {
+			//throw new MethodNotAllowedException();
+		//}
 		
 //		$salt = Configure::read('Security.salt');
 //		echo md5('ENTER_YOUR_PASSWORD_HERE'.$salt);
 		
-		if($this->request->is('post')) {
+	//	if($this->request->is('post')) {
 			// validate form
-			$this->User->set($this->data);
-			if($this->User->validates()) {
+		//	$this->User->set($this->data);
+		//	if($this->User->validates()) {
 				// save User to Session and redirect
-				$this->Session->write('User', $this->User->_user);
-				$this->Session->setFlash('You have successfully logged in', 'flash_good');
+			//	$this->Session->write('User', $this->User->_user);
+			//	$this->Session->setFlash('You have successfully logged in', 'flash_good');
 				
 				// redirect Admins to Admin Panel
-				if($this->User->_user['User']['admin']) {
-					$this->redirect(array('controller'=>'stores', 'action'=>'index', 'admin'=>TRUE));
+			//	if($this->User->_user['User']['admin']) {
+				//	$this->redirect(array('controller'=>'stores', 'action'=>'index', 'admin'=>TRUE));
 					
 				// redirect normal Users to main page
-				} else {
-					$this->redirect(array('controller'=>'stores', 'action'=>'index'));
-				}
-			}
-		}
-	}
+			//	} else {
+				//	$this->redirect(array('controller'=>'stores', 'action'=>'index'));
+				//}
+			//}
+	//	}
+	//}
+        
+        /**
+	 * add
+         * 
+         */
+        
+        
+	 
 	
 	/**
 	 * Logout action
          * 
          */
 	 
-	public function logout() {
-		$this->Session->delete('User');
-		$this->Session->setFlash('You have successfully logged out', 'flash_good');
-		$this->redirect(array('controller'=>'stores', 'action'=>'index'));
-	}
-        
+	function logout(){
+    $this->Session->setFlash('Logged out.');
+    $this->redirect($this->Auth->logout());
+}
         
         
 	

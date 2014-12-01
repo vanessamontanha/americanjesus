@@ -31,7 +31,7 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse">  <!-- If put 'in' at the end of panel-collapse collapse, the accordian will always open at the beginning. -->
       <div class="panel-body">
-         To make full use of Applergy mobile web application, we recommend you to use a device whose screen is no bigger than 760px. If you are still unsure on how to use the application you can either send us a message or visit our website for a detailed tutorial.
+         To make full use of Gluten Free mobile web application, we recommend you to use a device whose screen is no bigger than 760px. If you are still unsure on how to use the application you can send us a message for a detailed tutorial.
 
       </div>
     </div>
@@ -45,7 +45,7 @@
     </div>
     <div id="collapseTwo" class="panel-collapse collapse">
       <div class="panel-body">
-        <p>Applergy is a mobile web application. It can be used for any operating systems on mobile phones. Just type m.applergy.com in the browser and applergy will be loaded onto the screen.</a></p>
+        <p>Gluten Free is a mobile web application. It can be used for any operating systems on mobile phones. </a></p>
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@
     </div>
     <div id="collapseFour" class="panel-collapse collapse">
       <div class="panel-body">
-        <p>Applergy is a name given for mobile web application which is combination of Application and Allergy.</a></p>
+        <p>Gluten Free is a name given for mobile web application which is combination of Gluten and Free.</a></p>
       </div>
     </div>
   </div>

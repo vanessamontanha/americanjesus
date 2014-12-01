@@ -27,16 +27,20 @@ class User extends AppModel {
 	 * @var array
 	 */
 	public $validate = array(
+            
+            'username' => array(
+            'required' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'A username is required'
+            )
+        ),
+         
 		'email'=>array(
 			'notEmpty'=>array(
 				'rule'=>'notEmpty',
 				'message'=>'Please insert your email'
 			),
-			'check_user'=>array(
-				'rule'=>'check_user',
-				'message'=>'Either your Username or Password is invalid',
-				'last'=>TRUE
-			),
+			
 		),
 		'password'=>array(
 			'notEmpty'=>array(

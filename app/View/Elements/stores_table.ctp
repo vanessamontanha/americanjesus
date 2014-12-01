@@ -17,6 +17,7 @@
    <li class="list-group-item"><strong>Stars:</strong><span class="stars star_<?php echo $v['Store']['rating']; ?>"></span></li>
    <li class="list-group-item"><strong>Distance:</strong><?php echo (isset($v[0]['distance'])) ? round($v[0]['distance'],2).' '.$_search_distance : 'n/a'; ?> </li>
    <li class="list-group-item"><strong>Review:</strong> <?php echo $this->Html->link('Reviews', array('controller'=>'reviews','action'=>'index',$v['Store']['id'])); ?></li>
+  
 </ul>
 <hr>
 		<?php endforeach; ?>

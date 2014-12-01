@@ -10,6 +10,12 @@
                     <p><strong>Review: </strong><?php echo h($review['review']); ?></p>
                     <p><strong>Stars: </strong><span class="stars star_<?php echo $review['stars']; ?>"></span></p>
                     <p><strong>Date: </strong> <?php echo $this->Time->nice($review['created']); ?></p>
+                     <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
                     <hr>
 		<?php endforeach; ?>
 		<?php else: ?>

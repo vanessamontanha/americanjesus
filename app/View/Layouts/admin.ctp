@@ -1,4 +1,4 @@
-<?php $cakeDescription = __d('cake_dev', 'Applergy'); ?>
+<?php $cakeDescription = __d('cake_dev', 'Gluten Free'); ?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -7,8 +7,8 @@
 <head>
 	<meta charset="utf-8">
 	<title><?php echo $cakeDescription ?> | <?php echo $title_for_layout; ?></title>
-	<meta name="description" content="Applergy">
-	<meta name="author" content="Creative Vision">
+	<meta name="description" content="Gluten Free">
+	<meta name="author" content="Vanessa Montanha ">
 	
 	<?php
 		echo $this->Html->meta('icon');
@@ -38,7 +38,7 @@
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
-			<p>Created by <a href="http://www.applergy.com" target="_blank">Creative Vision</a> &copy; <?php echo date("Y"); ?></p>
+			<p>Created by Vanessa Montanha &copy; <?php echo date("Y"); ?></p>
 		</div>
 	</div>
 
