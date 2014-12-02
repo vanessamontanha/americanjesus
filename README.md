@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CakePHP
 =======
 
@@ -41,3 +42,7 @@ Get Support!
 [![Bake Status](https://secure.travis-ci.org/cakephp/cakephp.png?branch=master)](http://travis-ci.org/cakephp/cakephp)
 
 ![Cake Power](https://raw.github.com/cakephp/cakephp/master/lib/Cake/Console/Templates/skel/webroot/img/cake.power.gif)
+=======
+glufree
+=======
+>>>>>>> 6e4c6a2cd497df221957b574db76ce9ced3e4f3a
