@@ -27,6 +27,7 @@
 	<title>Gluten Free</title>
 	<meta name="description" content="Gluten Free">
 	<meta name="author" content="Vanessa Montanha">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<?php
 		echo $this->Html->meta('icon');

@@ -64,10 +64,10 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'eu-cdbr-azure-north-b.cloudapp.net',
-		'login' => 'b96a59d0173fd9',
-		'password' => '3676d5f1',
-		'database' => 'glufreeAR48Py4tX',
+		'host' => 'localhost',
+		'login' => 'user',
+		'password' => 'password',
+		'database' => 'database_name',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
@@ -82,9 +82,4 @@ class DATABASE_CONFIG {
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
-        
-        
-        
-     
-
 }
